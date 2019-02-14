@@ -1,0 +1,57 @@
+@import "./common.scss";
+@import "./mymixin.scss";
+* {
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    @include boxFlex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    font-size: pxTorem(18px);
+    background: rgb(84, 194, 84);
+    text-align: center;
+    height: pxTorem(45px);
+    line-height: pxTorem(45px);
+    color: aliceblue;
+}
+
+.main {
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    .banner {
+        width: 100%;
+        .swiper-container {
+            width: 100%;
+            .swiper-wrapper {
+                width: 100%;
+                .swiper-slide {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: pxTorem(50px);
+}
